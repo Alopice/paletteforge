@@ -46,7 +46,7 @@ export default function ImageEditor() {
         <>
             <div className=" md:col-span-2  border-4  border-white/10 bg-white/20 relative">
 
-                <BiReset className="hover:text-white/20  btn btn-primary w-fit bg-transparent border-none shadow-none absolute right-0 -top-[20%] text-white/50" size={30} onClick={()=>onClearImage()}/>
+                <BiReset className="hover:text-white/20  btn btn-primary w-fit bg-transparent border-none shadow-none absolute right-0 md:-top-[10%] -top-[2a0%] text-white/50" size={30} onClick={()=>onClearImage()}/>
 
                 <Cropper
                     src={imageSrc}
