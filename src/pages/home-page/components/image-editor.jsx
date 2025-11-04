@@ -3,6 +3,10 @@ import { useImageContext } from "../../../contexts/image-context";
 import { useRef, useState } from "react";
 import "cropperjs/dist/cropper.css";
 import ColorThief from "colorthief";
+import { GrClearOption } from "react-icons/gr";
+import { FaRemoveFormat } from "react-icons/fa";
+import { FcRemoveImage } from "react-icons/fc";
+import { BiReset } from "react-icons/bi";
 export default function ImageEditor() {
 
 
@@ -32,12 +36,21 @@ export default function ImageEditor() {
         };
     }
     const RgbToHex = (r, g, b) => "#" + [r, g, b].map(x => x.toString(16).padStart(2, "0")).join("");
+
+    const onClearImage = () => {
+        setImageSrc(null);
+        setColors([]);
+    }
+
     return (
         <>
-            <div className=" row-span-3 col-span-2  border-4 rounded-xl border-white/10 bg-white/20 relative">
+            <div className=" md:col-span-2  border-4  border-white/10 bg-white/20 relative">
+
+                <BiReset className="hover:text-white/20  btn btn-primary w-fit bg-transparent border-none shadow-none absolute right-0 -top-[20%] text-white/50" size={30} onClick={()=>onClearImage()}/>
+
                 <Cropper
                     src={imageSrc}
-                    style={{ height: "100%", width: "100%", }}
+                    style={{ height: "100%", width: "100%"}}
 
                     guides={false}
                     viewMode={1}

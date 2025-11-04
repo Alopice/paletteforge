@@ -43,7 +43,7 @@ export default function ImageDropper() {
 
     return (
         <>
-            <div {...getRootProps()} className="col-span-2 row-span-3 border-4 rounded-xl border-white/10 bg-white/20">
+            <div {...getRootProps()} className="md:col-span-2 md:row-span-3  border-4 rounded-xl border-white/10 bg-white/20">
                 <input type="file"  {...getInputProps()} />
                 <div className="flex flex-col justify-center items-center w-full h-full">
                     <Upload className="text-white/40" size={60} />

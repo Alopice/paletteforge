@@ -19,7 +19,7 @@ export default function ColorData(){
                     <span>Hex code copied!</span>
                 </div>
             </div>}
-            <div className="row-span-3 col-span-1 p-1   overflow-scroll scrollbar-hide">
+            <div className=" col-span-1 p-1   md:overflow-auto  ">
                 <section className="grid grid-cols-2 w-full  gap-2">
                     {
                         colors.map((hex,index)=>{
